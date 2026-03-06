@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const http = require("http");
 const { Server } = require("socket.io");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const Message = require("./models/Message");
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(cors({
 
 /* ---------------- MongoDB Connection ---------------- */
 
-mongoose.connect("mongodb://127.0.0.1:27017/chatapp");
+/*mongoose.connect("mongodb://127.0.0.1:27017/chatapp");
 
 mongoose.connection.once("open", () => {
   console.log("MongoDB connected");
