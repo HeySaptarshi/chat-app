@@ -6,7 +6,10 @@ const mongoose = require("mongoose");
 const Message = require("./models/Message");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://chat-app-orcin-seven-15.vercel.app/",
+  methods: ["GET", "POST"]
+}));
 
 /* ---------------- MongoDB Connection ---------------- */
 
